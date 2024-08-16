@@ -1,20 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dados do Sensor</title>
+    <title>Conversor de Bases - prof. Vinícius Costa</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Dados do Sensor</h1>
-    <p>Temperatura: <span id="temp"></span>°C</p>
-    <p>Umidade: <span id="umid"></span>%</p>
+    <div class="container">
+        <h1>Conversão de Números Decimais</h1>
 
-    <script>
-        function atualizarDados(temp, umid) {
-            document.getElementById('temp').innerText = temp;
-            document.getElementById('umid').innerText = umid;
-        }
-    </script>
+        <div class="timer">
+            <span id="minutes">00</span>:<span id="seconds">00</span>
+        </div>
+
+        <button id="generate-btn">Gerar Números</button>
+
+        <table id="conversion-table">
+            <thead>
+                <tr>
+                    <th>Decimal</th>
+                    <th>Binário</th>
+                    <th>Octal</th>
+                    <th>Hexadecimal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Conteúdo gerado dinamicamente -->
+            </tbody>
+        </table>
+
+        <button id="submit-btn" disabled>Terminar e Verificar</button>
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
